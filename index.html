@@ -1,145 +1,296 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZebraZóna - Biztonságos közlekedés</title>
-    <style>
-        :root {
-            --asphalt: #333333;
-            --road-line: #ffffff;
-            --sign-red: #ff0000;
-            --sign-blue: #0055ff;
-            --sign-yellow: #ffdb00;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZebraZóna – Hamarosan!</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sky: #3AABDE;
+    --sky-dark: #1e8bbf;
+    --green: #5BBD4A;
+    --green-dark: #3d9932;
+    --yellow: #F5D320;
+    --yellow-dark: #d4b000;
+    --gray-dark: #3a3a3a;
+    --white: #ffffff;
+    --road: #b0b0b0;
+  }
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial Black', sans-serif;
-            background-color: var(--asphalt);
-            /* Aszfalt textúra és útburkolati jel */
-            background-image: 
-                linear-gradient(90deg, transparent 48%, var(--road-line) 49%, var(--road-line) 51%, transparent 52%),
-                radial-gradient(#444 15%, transparent 16%);
-            background-size: 100% 100px, 10px 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: white;
-        }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        .container {
-            text-align: center;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 50px;
-            border: 8px solid var(--road-line);
-            border-radius: 15px;
-            box-shadow: 0 0 50px rgba(0,0,0,1);
-            position: relative;
-        }
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--sky);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
 
-        /* Zebra minta a cím alatt */
-        .zebra-divider {
-            height: 30px;
-            background: repeating-linear-gradient(
-                90deg,
-                #fff,
-                #fff 20px,
-                #000 20px,
-                #000 40px
-            );
-            margin: 20px 0;
-            border: 2px solid #fff;
-        }
+  /* ── Animated sky background ── */
+  .sky-bg {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, #2b9fd4 0%, #5ec8ee 55%, #8edaf7 100%);
+    z-index: 0;
+  }
 
-        h1 {
-            font-size: 4rem;
-            margin: 0;
-            text-transform: uppercase;
-            text-shadow: 3px 3px 0px var(--sign-blue);
-        }
+  /* Clouds */
+  .cloud {
+    position: fixed;
+    background: #fff;
+    border-radius: 50px;
+    opacity: 0.85;
+    z-index: 1;
+    animation: drift linear infinite;
+  }
+  .cloud::before, .cloud::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+  }
+  .c1 { width: 140px; height: 45px; top: 8%; animation-duration: 28s; animation-delay: 0s; left: -160px; }
+  .c1::before { width: 70px; height: 70px; top: -35px; left: 20px; }
+  .c1::after  { width: 50px; height: 50px; top: -25px; left: 65px; }
+  .c2 { width: 100px; height: 32px; top: 18%; animation-duration: 22s; animation-delay: -8s; left: -120px; }
+  .c2::before { width: 55px; height: 55px; top: -28px; left: 15px; }
+  .c2::after  { width: 40px; height: 40px; top: -18px; left: 50px; }
+  .c3 { width: 180px; height: 55px; top: 5%; animation-duration: 35s; animation-delay: -18s; left: -200px; }
+  .c3::before { width: 90px; height: 90px; top: -45px; left: 25px; }
+  .c3::after  { width: 65px; height: 65px; top: -30px; left: 90px; }
+  .c4 { width: 80px; height: 26px; top: 25%; animation-duration: 18s; animation-delay: -5s; left: -100px; }
+  .c4::before { width: 42px; height: 42px; top: -22px; left: 10px; }
+  .c4::after  { width: 30px; height: 30px; top: -14px; left: 38px; }
 
-        .subtitle {
-            font-family: 'Segoe UI', sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            color: var(--sign-yellow);
-        }
+  @keyframes drift {
+    from { transform: translateX(0); }
+    to   { transform: translateX(calc(100vw + 250px)); }
+  }
 
-        .menu-grid {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
+  /* ── Zebra stripes overlay (subtle) ── */
+  .stripe-overlay {
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      135deg,
+      transparent 0px,
+      transparent 60px,
+      rgba(255,255,255,0.03) 60px,
+      rgba(255,255,255,0.03) 65px
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
 
-        .btn {
-            background: var(--sign-blue);
-            color: white;
-            border: 4px solid white;
-            padding: 20px 40px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            border-radius: 10px;
-            transition: all 0.2s;
-            text-decoration: none;
-            display: inline-block;
-        }
+  /* ── Main layout ── */
+  .page {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    gap: 0;
+  }
 
-        .btn-quiz {
-            background: #228b22; /* Közlekedési zöld */
-        }
+  /* ── Logo badge ── */
+  .logo-wrap {
+    animation: bounceIn 0.8s cubic-bezier(.36,1.6,.5,1) both;
+    margin-bottom: 0.5rem;
+  }
+  .logo-wrap img {
+    width: clamp(160px, 28vw, 260px);
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.28));
+    transition: transform 0.3s;
+  }
+  .logo-wrap img:hover { transform: rotate(-4deg) scale(1.05); }
 
-        .btn:hover {
-            transform: scale(1.1) rotate(-2deg);
-            background: var(--sign-yellow);
-            color: black;
-        }
+  @keyframes bounceIn {
+    from { opacity: 0; transform: scale(0.4) translateY(40px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+  }
 
-        /* Közlekedési lámpa dekoráció */
-        .traffic-light {
-            position: absolute;
-            top: -40px;
-            right: -30px;
-            background: #222;
-            padding: 10px;
-            border-radius: 10px;
-            border: 2px solid #555;
-        }
-        .light {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            margin: 5px 0;
-        }
-        .red { background: red; box-shadow: 0 0 10px red; }
-        .yellow { background: yellow; }
-        .green { background: #00ff00; }
+  /* ── Headline ── */
+  .headline {
+    font-family: 'Fredoka One', cursive;
+    font-size: clamp(2.8rem, 9vw, 6.5rem);
+    color: var(--white);
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-shadow:
+      4px 4px 0 var(--gray-dark),
+      0 0 40px rgba(255,255,255,0.2);
+    animation: slideDown 0.7s 0.3s cubic-bezier(.36,1.5,.5,1) both;
+    margin-bottom: 0.3rem;
+  }
 
-    </style>
+  .headline span {
+    color: var(--yellow);
+    text-shadow:
+      3px 3px 0 var(--yellow-dark),
+      5px 5px 0 var(--gray-dark);
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Sub ── */
+  .sub {
+    font-size: clamp(1.1rem, 3vw, 1.55rem);
+    font-weight: 800;
+    color: var(--white);
+    text-align: center;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.25);
+    animation: slideDown 0.7s 0.5s cubic-bezier(.36,1.5,.5,1) both;
+    margin-bottom: 2.5rem;
+    max-width: 560px;
+  }
+
+  /* ── Countdown ── */
+  .countdown-wrap {
+    display: flex;
+    gap: clamp(0.6rem, 2.5vw, 1.5rem);
+    animation: fadeUp 0.6s 0.7s ease both;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cd-block {
+    background: var(--white);
+    border: 4px solid var(--gray-dark);
+    border-radius: 20px;
+    padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1rem, 3vw, 1.8rem);
+    text-align: center;
+    box-shadow: 5px 6px 0 var(--gray-dark);
+    min-width: clamp(72px, 15vw, 110px);
+    transition: transform 0.15s;
+  }
+  .cd-block:hover { transform: translateY(-4px) rotate(-2deg); }
+  .cd-block:nth-child(even):hover { transform: translateY(-4px) rotate(2deg); }
+
+  .cd-num {
+    font-family: 'Fredoka One', cursive;
+    font-size: clamp(2rem, 6vw, 3.6rem);
+    color: var(--green-dark);
+    line-height: 1;
+    display: block;
+    transition: transform 0.2s;
+  }
+  .cd-num.flip {
+    animation: numFlip 0.3s ease;
+  }
+  @keyframes numFlip {
+    0%   { transform: scaleY(1); }
+    50%  { transform: scaleY(0); }
+    100% { transform: scaleY(1); }
+  }
+
+  .cd-label {
+    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
+    font-weight: 800;
+    color: var(--gray-dark);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+    display: block;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 480px) {
+    .page { padding-top: 1.5rem; }
+    .cd-block { padding: 0.6rem 0.9rem; border-radius: 14px; }
+  }
+</style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="traffic-light">
-            <div class="light red"></div>
-            <div class="light yellow"></div>
-            <div class="light green"></div>
-        </div>
+<div class="sky-bg"></div>
+<div class="stripe-overlay"></div>
 
-        <h1>ZebraZóna</h1>
-        <div class="zebra-divider"></div>
-        <div class="subtitle">Közlekedj okosan, érj haza épségben!</div>
+<!-- Clouds -->
+<div class="cloud c1"></div>
+<div class="cloud c2"></div>
+<div class="cloud c3"></div>
+<div class="cloud c4"></div>
 
-        <div class="menu-grid">
-            <a href="#" class="btn btn-quiz">INDUL AZ OKTATÁS!</a>
-        </div>
+<!-- Main content -->
+<main class="page">
 
-        <div style="margin-top: 30px; font-family: sans-serif; font-size: 0.9rem; opacity: 0.7;">
-            Használd a tudásod a biztonságos közlekedéshez!
-        </div>
+  <div class="logo-wrap">
+    <img src="zebrazona.png" alt="ZebraZóna logó">
+  </div>
+
+  <h1 class="headline">Hamarosan<span>!</span></h1>
+
+  <p class="sub">Valami menő készül a kis kerékpárosoknak 🚲<br>Maradj velünk, értesítünk, amint nyitunk!</p>
+
+  <!-- Countdown -->
+  <div class="countdown-wrap">
+    <div class="cd-block">
+      <span class="cd-num" id="cd-days">00</span>
+      <span class="cd-label">nap</span>
     </div>
+    <div class="cd-block">
+      <span class="cd-num" id="cd-hours">00</span>
+      <span class="cd-label">óra</span>
+    </div>
+    <div class="cd-block">
+      <span class="cd-num" id="cd-mins">00</span>
+      <span class="cd-label">perc</span>
+    </div>
+    <div class="cd-block">
+      <span class="cd-num" id="cd-secs">00</span>
+      <span class="cd-label">mp</span>
+    </div>
+  </div>
 
+</main>
+
+<script>
+  const LAUNCH = new Date('2026-05-03T24:00:00');
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function animateFlip(el, newVal) {
+    const formatted = pad(newVal);
+    if (el.textContent !== formatted) {
+      el.classList.remove('flip');
+      void el.offsetWidth;
+      el.classList.add('flip');
+      el.textContent = formatted;
+    }
+  }
+
+  function tick() {
+    const now = new Date();
+    const diff = LAUNCH - now;
+    if (diff <= 0) {
+      ['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id => {
+        document.getElementById(id).textContent = '00';
+      });
+      return;
+    }
+    animateFlip(document.getElementById('cd-days'),  Math.floor(diff / 86400000));
+    animateFlip(document.getElementById('cd-hours'), Math.floor((diff % 86400000) / 3600000));
+    animateFlip(document.getElementById('cd-mins'),  Math.floor((diff % 3600000)  / 60000));
+    animateFlip(document.getElementById('cd-secs'),  Math.floor((diff % 60000)    / 1000));
+  }
+
+  tick();
+  setInterval(tick, 1000);
+</script>
 </body>
 </html>
