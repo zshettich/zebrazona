@@ -1,0 +1,418 @@
+/* /Layout/MainLayout.razor.rz.scp.css */
+.page[b-qwv4zmcahf] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.sound-button[b-qwv4zmcahf] {
+    position: absolute;
+    right:10px;
+    top:10px;
+    width: 70px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+}
+    .sound-button:hover[b-qwv4zmcahf] {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+main[b-qwv4zmcahf] {
+    flex: 1;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/images/bg.webp');
+    background-size: cover; /* teljes kit�lt�s */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+@media (max-width: 640.98px) {
+    .top-row[b-qwv4zmcahf] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-qwv4zmcahf]  a, .top-row[b-qwv4zmcahf]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-qwv4zmcahf] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-qwv4zmcahf] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-qwv4zmcahf] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth[b-qwv4zmcahf]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+
+    .top-row[b-qwv4zmcahf], article[b-qwv4zmcahf] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+/* /Pages/Home.razor.rz.scp.css */
+html[b-lsu1sbe3gp], body[b-lsu1sbe3gp] {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.home-container[b-lsu1sbe3gp] {
+    position: fixed; /* FONTOS: teljes képernyő fix */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.overlay[b-lsu1sbe3gp] {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-box[b-lsu1sbe3gp] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* LOGO – MEGNÖVELVE */
+.logo[b-lsu1sbe3gp] {
+    width: 450px; /* <-- EZ LETT NAGYOBB */
+    max-width: 90%; /* mobilon ne lógjon ki */
+}
+
+/* START KÉP */
+.start-image[b-lsu1sbe3gp] {
+    width: 260px;
+    max-width: 60%;
+    cursor: pointer;
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+    .start-image:hover[b-lsu1sbe3gp] {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+
+    .start-image:active[b-lsu1sbe3gp] {
+        transform: scale(0.95);
+        filter: brightness(0.9);
+    }
+/* /Pages/Learning.razor.rz.scp.css */
+.menu-container[b-euglcxkz4v] {
+    position: fixed; /* FONTOS: teljes képernyő fix */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.overlay[b-euglcxkz4v] {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-container[b-euglcxkz4v] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+
+
+/* FELSŐ KÉP */
+
+.content-image[b-euglcxkz4v] {
+    margin-top: 10px;
+    width: 320px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid #333;
+    padding: 5px;
+    background-color: #111;
+}
+/* FRAME WRAPPER (itt lesz overlay) */
+.frame-wrapper[b-euglcxkz4v] {
+    position: relative;
+    top: -70px;
+    width: 1020px;
+    display: flex;
+    justify-content: center;
+}
+
+/* FRAME KÉP */
+.frame-image[b-euglcxkz4v] {
+    width: 1120px;
+    height: auto;
+    display: block;
+}
+
+/* OVERLAY SZÖVEG */
+.overlay-text[b-euglcxkz4v] {
+    position: absolute;
+    top: 80px;
+    width: 90%;
+    margin: 10px;
+    z-index: 2;
+    font-family: "Comic Sans MS", cursive;
+    pointer-events: none;
+}
+
+/* GOMB SOR */
+.button-row[b-euglcxkz4v] {
+    display: flex;
+    justify-content: space-between;
+    width: 420px;
+    margin-top: 1px;
+    bottom: 0;
+}
+
+/* GOMB */
+.nav-button[b-euglcxkz4v] {
+    width: 90px;
+    cursor: pointer;
+}
+/* Gombok */
+.nav-button[b-euglcxkz4v] {
+    width: 90px;
+    cursor: pointer;
+    user-select: none;
+}
+
+    .nav-button.disabled[b-euglcxkz4v] {
+        opacity: 0.4;
+        pointer-events: none;
+        cursor: default;
+    }
+
+    .nav-button:hover[b-euglcxkz4v] {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+/* /Pages/Menu.razor.rz.scp.css */
+
+.menu-container[b-h9okz1lsht] {
+    position: fixed; /* FONTOS: teljes képernyő fix */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.overlay[b-h9okz1lsht] {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-box[b-h9okz1lsht] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* LOGO – MEGNÖVELVE */
+.logo[b-h9okz1lsht] {
+    width: 450px; /* <-- EZ LETT NAGYOBB */
+    max-width: 90%; /* mobilon ne lógjon ki */
+}
+
+/* START KÉP */
+.button-wrapper[b-h9okz1lsht] {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button-image[b-h9okz1lsht] {
+    width: 300px;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+
+
+    .button-image:active[b-h9okz1lsht] {
+        transform: scale(0.95);
+        filter: brightness(0.9);
+    }
+/* SZÖVEG A KÉP KÖZEPÉN */
+.button-text[b-h9okz1lsht] {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Comic Sans MS", cursive;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    pointer-events: none; /* fontos: kattintás átmegy */
+    user-select: none;
+}
+
+.button-image:hover[b-h9okz1lsht] {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+/* /Pages/Quiz.razor.rz.scp.css */
+.menu-container[b-eld0ktassm] {
+    position: fixed; /* FONTOS: teljes képernyő fix */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.overlay[b-eld0ktassm] {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quiz-container[b-eld0ktassm] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+/* FELSŐ KÉP */
+.question-image[b-eld0ktassm] {
+    margin-top: 10px;
+    width: auto;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 4px solid #333;
+    padding: 5px;
+    background-color: #111;
+}
+/* OVERLAY SZÖVEG */
+.question-text[b-eld0ktassm] {
+    position: relative;
+    width: 90%;
+    margin: 10px;
+    z-index: 2;
+    font-family: "Comic Sans MS", cursive;
+    pointer-events: none;
+}
+
+
+/* Gombok */
+.button-image[b-eld0ktassm] {
+    width: 600px;
+    height:100px;
+    cursor: pointer;
+    user-select: none;
+}
+    .button-image.disabled[b-eld0ktassm] {
+        opacity: 0.4;
+        pointer-events: none;
+        cursor: default;
+    }
+    .button-image:hover[b-eld0ktassm] {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+
+.button-wrapper[b-eld0ktassm] {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button-text[b-eld0ktassm] {
+    position: absolute;
+    top: 20%;
+    left: 1%;
+    text-align: center;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    pointer-events: none; /* fontos: kattintás átmegy */
+    user-select: none;
+    width: 600px;
+}
+   
+    .nav-button[b-eld0ktassm] {
+        width: 90px;
+        cursor: pointer;
+        user-select: none;
+    }
+.button-text.disabled[b-eld0ktassm],
+.nav-button.disabled[b-eld0ktassm] {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: default;
+}
+    .nav-button:hover[b-eld0ktassm] {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+
+.question-text[b-eld0ktassm] {
+    background-color: darkblue;
+    padding: 10px;
+    border: 4px solid #fff;
+}
+
+.title-text[b-eld0ktassm],
+.question-text[b-eld0ktassm] {
+    font-family: "Comic Sans MS", cursive;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    width: auto;
+    pointer-events: none; /* fontos: kattintás átmegy */
+    user-select: none;
+}
+
+.button-row[b-eld0ktassm] {
+    display: flex;
+    justify-content: center;
+    width: 420px;
+    margin-top: 1px;
+    bottom: 0;
+}

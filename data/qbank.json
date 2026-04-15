@@ -1,0 +1,107 @@
+[
+  {
+    "imageUrl": "0",
+    "Text": "kérdés",
+    "Answers": [ "A", "B", "C", "D" ]
+  },
+  {
+    "imageUrl": "1",
+    "Text": "Hol szabad átkelni az úton?",
+    "Answers": [ "Zebrán", "Úttesten bárhol", "Fűben", "Parkolóban" ]
+  },
+  {
+    "imageUrl": "2",
+    "Text": "Mit jelent a piros lámpa?",
+    "Answers": [ "Megállunk", "Lassíts", "Mehetünk", "Kanyarodunk" ]
+  },
+  {
+    "imageUrl": "3",
+    "Text": "Kell bukósisak biciklizéshez?",
+    "Answers": [ "Igen", "Nem", "Csak este", "Csak télen" ]
+  },
+  {
+    "imageUrl": "4",
+    "Text": "Mielőtt lelépsz az útra, mit kell tenni?",
+    "Answers": [ "Körülnézni", "Kiabálni", "Futni", "Leülni" ]
+  },
+  {
+    "imageUrl": "5",
+    "Text": "Hol kell sétálni, ha van járda?",
+    "Answers": [ "Járdán", "Bicikliúton", "Úttesten", "A parkoló autók között" ]
+  },
+  {
+    "imageUrl": "6",
+    "Text": "Mit jelent ez a tábla?",
+    "Answers": [ "Zebra", "Megállni", "Buszmegálló", "Játszótér" ]
+  },
+  {
+    "imageUrl": "7",
+    "Text": "Mit kell használni sötétben?",
+    "Answers": [ "Fényvisszaverő mellényt", "Sapkát", "Biciklit", "Kesztyűt" ]
+  },
+  {
+    "imageUrl": "8",
+    "Text": "Mit jelent ez a tábla?",
+    "Answers": [ "Mindenesetben meg kell állni!", "Meg kell fordulni!", "Lassítani kell.", "Csak futva mehetünk tovább." ]
+  },
+  {
+    "imageUrl": "9",
+    "Text": "Biciklizés közben kell jelezni, ha irányt váltunk?",
+    "Answers": [ "Igen, kézzel jelezzük", "Nem", "Nem, csak gyorsítunk", "Igen, integetünk" ]
+  },
+  {
+    "imageUrl": "10",
+    "Text": "Mit jelent a zöld lámpa?",
+    "Answers": [ "Mehetünk", "Futhatunk", "Várunk", "Visszafordulunk" ]
+  },
+  {
+    "imageUrl": "11",
+    "Text": "Melyik oldalon biciklizünk?",
+    "Answers": [ "Jobb oldalon", "Baloldalon", "Középen", "Bárhol" ]
+  },
+  {
+    "imageUrl": "12",
+    "Text": "Mit jelent a sárga lámpa?",
+    "Answers": [ "Állj meg ha lehet.", "Gyorsíts.", "Mehetsz mindig", "Fordulj vissza" ]
+  },
+  {
+    "imageUrl": "13",
+    "Text": "Hol nem szabad játszani?",
+    "Answers": [ "Úttesten", "Parkban", "Játszótéren", "Udvaron" ]
+  },
+  {
+    "imageUrl": "14",
+    "Text": "Mit kell tenni zebránál, ha autó jön?",
+    "Answers": [ "Megállni és várni", "Visszalépni", "Futni", "Kiabálni" ]
+  },
+  {
+    "imageUrl": "15",
+    "Text": "Mit jelent ez a tábla?",
+    "Answers": [ "Megállni és elsőbbséget adni", "Semmit", "Gyorsítani", "Parkolni" ]
+  },
+  {
+    "imageUrl": "16",
+    "Text": "Mikor kell lámpát használni biciklin?",
+    "Answers": [ "Sötétben", "Csak nyáron", "Csak nappal", "Soha" ]
+  },
+  {
+    "imageUrl": "17",
+    "Text": "Hány ember ülhet egy biciklin?",
+    "Answers": [ "1", "2", "3", "4" ]
+  },
+  {
+    "imageUrl": "18",
+    "Text": "Hol szabad biciklizni?",
+    "Answers": [ "Bicikliúron", "Járdán mindig", "Autópályán", "Bárhol" ]
+  },
+  {
+    "imageUrl": "19",
+    "Text": "Mit kell tenni, mielőtt biciklivel elindulsz?",
+    "Answers": [ "Ellenőrízni a biciklit", "Semmit", "Futni", "Kiabálni" ]
+  },
+  {
+    "imageUrl": "20",
+    "Text": "Kell a biciklire csengőt szerelni?",
+    "Answers": [ "Igen", "Nem", "Nem tudom", "Lehet" ]
+  }
+]
