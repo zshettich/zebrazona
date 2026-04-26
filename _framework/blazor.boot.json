@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ZebraZona",
   "resources": {
-    "hash": "sha256-Hk48jIwr8Y6SdC0TSFlpMK2Of+uYa95jjaRd+vb4ynQ=",
+    "hash": "sha256-+lZ0fORE2VPSYMYlbzOiHQpqyDad3dlggGkXtOS7Tmw=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-nElGk+CZFyq0PbPm4JU8avD6lER7x9Z1C54BK7qY12Q="
     },
@@ -37,7 +37,7 @@
       "System.Collections.Concurrent.wasm": "sha256-//MCg9m04Zo6+cg11tEa7ivb3eFzQBUSDMrPV1ROBZQ=",
       "System.Collections.wasm": "sha256-4/rda0bA+N540HT71Is4Qdahzvm6kBIQI1UJ27L++NQ=",
       "System.ComponentModel.wasm": "sha256-Kb7hdl6dKgHlWyXzGYr2Mo6jLQGRYtOIVlEf3Dmnj04=",
-      "System.Console.wasm": "sha256-4siL/LkUvMbbaCm4kBPtrmbVoq802l0cgkNqxYHkdfs=",
+      "System.Console.wasm": "sha256-ltUpHJAR+rSY7E6Ygf1YJjzECKJQEb9CRLVlpDDiB1o=",
       "System.Diagnostics.DiagnosticSource.wasm": "sha256-pHKorGEjESpZRncgUSnRAOonQ1mvMdLvYaFVVCSxLus=",
       "System.Linq.wasm": "sha256-XUC+RkrznohhZONhsCzoYVuHbLRruwlU84t0NOGz1ig=",
       "System.Memory.wasm": "sha256-Kleae0lQNAgLQJOqgk0Bk8pHKwOLk9TyQU0ooh95onQ=",
@@ -51,7 +51,7 @@
       "System.Text.Json.wasm": "sha256-LBIqRkbdRxyoOvYvq51zcslGc21hkQt/aj944GCiV/4=",
       "System.Text.RegularExpressions.wasm": "sha256-NL5sBkQtOmwbpwZ0yb6AlsOfFlNN4wrT6EdNssIKLIg=",
       "System.Private.CoreLib.wasm": "sha256-JFjM4RjbZx44YDBFJnP2tLKxUr0EPKKS334X/VAtgC4=",
-      "ZebraZona.wasm": "sha256-wTqWNNy0p37QQxLyMyESf8OgT68sbwCInYBqAtvggms="
+      "ZebraZona.wasm": "sha256-/I9445T3aznz5D6jCkbdxHwX1b02o5C3CSNCwu9EAbk="
     }
   },
   "cacheBootResources": true,

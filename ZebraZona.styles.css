@@ -370,7 +370,6 @@ html[b-lsu1sbe3gp], body[b-lsu1sbe3gp] {
     font-family: "Comic Sans MS", cursive;
     font-size: 28px;
     font-weight: bold;
-    color: white;
     pointer-events: none; /* fontos: kattintás átmegy */
     user-select: none;
     width: 600px;
@@ -411,7 +410,7 @@ html[b-lsu1sbe3gp], body[b-lsu1sbe3gp] {
 
 .button-row[b-eld0ktassm] {
     display: flex;
-    justify-content: center;
+    
     width: 420px;
     margin-top: 1px;
     bottom: 0;
