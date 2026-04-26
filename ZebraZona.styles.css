@@ -3,10 +3,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    
 }
 .sound-button[b-qwv4zmcahf] {
     position: absolute;
-    right:10px;
+    right:20px;
     top:10px;
     width: 70px;
     cursor: pointer;
@@ -26,7 +27,12 @@ main[b-qwv4zmcahf] {
     background-position: center;
     background-repeat: no-repeat;
 }
-
+.content[b-qwv4zmcahf] {
+    width: 100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.35);
+    
+}
 
 @media (max-width: 640.98px) {
     .top-row[b-qwv4zmcahf] {
@@ -72,6 +78,7 @@ html[b-lsu1sbe3gp], body[b-lsu1sbe3gp] {
     margin: 0;
     padding: 0;
     height: 100%;
+    
 }
 
 .home-container[b-lsu1sbe3gp] {
@@ -80,16 +87,12 @@ html[b-lsu1sbe3gp], body[b-lsu1sbe3gp] {
     left: 0;
     width: 100vw;
     height: 100vh;
-}
-
-.overlay[b-lsu1sbe3gp] {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.35);
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+
 
 .center-box[b-lsu1sbe3gp] {
     display: flex;
@@ -127,21 +130,16 @@ html[b-lsu1sbe3gp], body[b-lsu1sbe3gp] {
     position: fixed; /* FONTOS: teljes képernyő fix */
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
-.overlay[b-euglcxkz4v] {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.35);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow-y: auto;
 }
+
+
 
 .quiz-container[b-euglcxkz4v] {
     display: flex;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -196,7 +194,7 @@ html[b-lsu1sbe3gp], body[b-lsu1sbe3gp] {
     justify-content: space-between;
     width: 420px;
     margin-top: 1px;
-    bottom: 0;
+    bottom:0;
 }
 
 /* GOMB */
@@ -225,26 +223,21 @@ html[b-lsu1sbe3gp], body[b-lsu1sbe3gp] {
 
 .menu-container[b-h9okz1lsht] {
     position: fixed; /* FONTOS: teljes képernyő fix */
+    display: flex;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
-.overlay[b-h9okz1lsht] {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.35);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .center-box[b-h9okz1lsht] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+   
     gap: 20px;
 }
 
@@ -299,21 +292,19 @@ html[b-lsu1sbe3gp], body[b-lsu1sbe3gp] {
     left: 0;
     width: 100vw;
     height: 100vh;
+    overflow-y: auto;
+   
 }
-.overlay[b-eld0ktassm] {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.35);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .quiz-container[b-eld0ktassm] {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 4px;
+    height:100%;
+  
+   
 }
 
 /* FELSŐ KÉP */
