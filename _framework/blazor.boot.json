@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ZebraZona",
   "resources": {
-    "hash": "sha256-ramYAxXrw84EnqQi8zntThMtzpNNAulZY22fcP26NDM=",
+    "hash": "sha256-05Engi53+7P8nInbKDscjrfwI3iZEArOtNkR3mlAZUg=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-nElGk+CZFyq0PbPm4JU8avD6lER7x9Z1C54BK7qY12Q="
     },
@@ -51,7 +51,7 @@
       "System.Text.Json.wasm": "sha256-LBIqRkbdRxyoOvYvq51zcslGc21hkQt/aj944GCiV/4=",
       "System.Text.RegularExpressions.wasm": "sha256-NL5sBkQtOmwbpwZ0yb6AlsOfFlNN4wrT6EdNssIKLIg=",
       "System.Private.CoreLib.wasm": "sha256-JFjM4RjbZx44YDBFJnP2tLKxUr0EPKKS334X/VAtgC4=",
-      "ZebraZona.wasm": "sha256-pJSS+NaPZ01VyRw3dm7OOb6oSAtSs5tSVX4e3JQyI0M="
+      "ZebraZona.wasm": "sha256-O9xpvYQjk7KhobXxm0hY2A0RfjsJ2WN0nanqA8s9xtE="
     }
   },
   "cacheBootResources": true,

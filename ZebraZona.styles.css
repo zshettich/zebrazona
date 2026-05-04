@@ -73,6 +73,49 @@ main[b-qwv4zmcahf] {
         padding-right: 1.5rem !important;
     }
 }
+/* /Pages/Common/MobileBlocker.razor.rz.scp.css */
+.mobile-blocker[b-h285osi7v0] {
+    display: none;
+}
+
+/* Ha a képernyő kisebb mint 800px → blokkol */
+@media (max-width: 800px) {
+
+    .mobile-blocker[b-h285osi7v0] {
+        position:absolute;
+        background-color: lightblue;
+        position: fixed;
+        inset: 0;
+        
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+
+    .mobile-box[b-h285osi7v0] {
+        text-align: center;
+        font-size: 12px;
+        font-family: 'Comic Sans MS';
+        padding: 30px;
+        background:  darkgreen;
+        border-radius: 12px;
+        border-color:antiquewhite;
+        border: dashed;
+        max-width: 90%;
+    }
+    .rabbit-pic[b-h285osi7v0] {
+        width: 200px; /* <-- EZ LETT NAGYOBB */
+        max-width: 90%; /* mobilon ne lógjon ki */
+    }
+
+
+    /* TELJES APP ELREJTÉSE */
+    body *:not(.mobile-blocker):not(.mobile-blocker *)[b-h285osi7v0] {
+        display: none !important;
+    }
+}
 /* /Pages/Home.razor.rz.scp.css */
 html[b-lsu1sbe3gp], body[b-lsu1sbe3gp] {
     margin: 0;
@@ -142,7 +185,7 @@ html[b-lsu1sbe3gp], body[b-lsu1sbe3gp] {
     height: 100%;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    
     gap: 4px;
 }
 
@@ -300,9 +343,9 @@ html[b-lsu1sbe3gp], body[b-lsu1sbe3gp] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin-top:2%;
     gap: 4px;
-    height:100%;
+    height:90%;
   
    
 }
